@@ -1,7 +1,7 @@
 # HIP Devcontainer
-Sample [Devcontainer](https://code.visualstudio.com/docs/devcontainers/containers) setup for development of C++ applications based on [AMD's HIP sdk](https://archive.is/oqy3A) and compiled for CUDA.
+Sample [Devcontainer](https://code.visualstudio.com/docs/devcontainers/containers) setup for development of C++ applications that use [AMD's HIP sdk](https://archive.is/oqy3A) and target the CUDA runtime.
 
-This is a Devcontainer setup for those who want to develop applications compiled with HIP targeting CUDA. I don't have and AMD gpu to test setup and environment targeting ROCm, so CUDA is the best I can do. This sample is copied from a personal project, so settings and installed extensions and libraries are my personal choice.
+This is a Devcontainer setup for those who want to develop applications compiled with HIP targeting CUDA. I don't have an AMD gpu to try setting up an environment targeting ROCm, so CUDA is the best I can do. This sample is copied from a personal project, so settings and installed extensions and libraries are my personal choice.
 
 Although Debian 13 is supported since CUDA 13.1.0, I haven't had the willpower to update the base image to Debian 13.
 
