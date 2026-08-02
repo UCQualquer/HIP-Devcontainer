@@ -1,0 +1,14 @@
+services:
+  devcon:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+
+    volumes:
+      - ..:/devcon:cached
+    
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]

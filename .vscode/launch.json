@@ -1,0 +1,21 @@
+{
+    "inputs": [
+        {
+            "id": "MyCMakeProject",
+            "type": "command",
+            "command": "cmake.launchTargetPath",
+            "args": { "targetName": "mycmaketargetname" }
+        }
+    ],
+    "configurations": [
+        {
+            "name": "My CMake Project",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${input:MyCMakeProject}",
+            "cwd": "${workspaceFolder}",
+            "args": [],
+            "initCommands": ["settings set target.disable-aslr false"]
+        }
+    ]
+}

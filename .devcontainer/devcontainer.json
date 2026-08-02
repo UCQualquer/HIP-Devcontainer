@@ -1,0 +1,24 @@
+{
+	"name": "HIP devcontainer",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "devcon",
+	"workspaceFolder": "/devcon",
+	"hostRequirements": {
+		"gpu": true
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"llvm-vs-code-extensions.vscode-clangd", // C++ intellisense, format, lint, etc.
+				"ms-azuretools.vscode-containers", // For Dockerfile language support.
+				"ms-vscode.cmake-tools", // Support for CMake projects.
+				"josetr.cmake-language-support-vscode", // Better CMake language support.
+				"vadimcn.vscode-lldb" // C++ debugger.
+			],
+			"settings": {
+				"clangd.path": "clangd", // For some reason VSCode tries to find clangd on the host machine without this?
+				"cmake.copyCompileCommands": "${workspaceFolder}/out/build/compile_commands.json" // Change this to whatever fits your folder structure.
+			}
+		}
+	}
+}
